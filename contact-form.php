@@ -29,13 +29,13 @@ if (isset($_POST['inputName']) && isset($_POST['inputEmail']) && isset($_POST['i
     $mail->SMTPSecure = "tls";
     $mail->Host = "smtp.gmail.com";
     $mail->Port = 587;
-    $mail->Username = "fajarbukhaeri08@gmail.com";
-    $mail->Password = "08041994";
-    $mail->SetFrom('fajarbukhaeri08@gmail.com','De Yo');
-    $mail->FromName = "Fajar";
+    $mail->Username = "info.officialid@gmail.com";
+    $mail->Password = "r4h4z14p1z4n";
+    $mail->SetFrom('info.officialid@gmail.com','De Yo');
+    $mail->FromName = "Info Offical ID";
     $mail->AddAddress($email);
-    $mail->Subject = "Prueba con PHPMailer";
-    $mail->Body = "<H3>Bienvenido! Esto Funciona!</H3>";
+    $mail->Subject = "Test Email Official ID";
+    $mail->Body = "Thanks, <b>".$_POST['inputName']."</b><br>We have received your message.<br><br><p>Best regards,<br>-Official ID Team-";
     $mail->IsHTML (true);
     $mail->Send();
 
