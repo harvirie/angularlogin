@@ -1,0 +1,39 @@
+<!-- 
+  Author - Anjana Wijesundara
+  Content - wsanjana951@gmail.com
+-->
+<h2>Customers</h2>
+
+<div ng-controller="CustomerListControler">
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>ID Reseller</th>
+      <th>First Name</th>
+      <th>No. KTP</th>
+      <th>Email</th>
+      <th>Alamat</th>
+      <th>No. HP</th>
+      <th>No. WA</th>
+      <th>No. PIn BBM</th>
+      <th>Status Approval</th>
+      <th>Option</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="res in customers | orderBy: 'First_Name'">
+      <td>{{res.idreseller}}</td>
+      <td>{{res.First_Name}}</td>
+      <td>{{res.no_ktp}}</td>
+      <td>{{res.alamat}}</td>
+      <td>{{res.Email}}</td>
+      <td>{{res.no_hp}}</td>
+      <td>{{res.no_wa}}</td>
+      <td>{{res.pin_bbm}}</td>
+      <td>{{res.Status}}</td>
+      <td><a href="#/UpdateCustomer/{{res.id}}" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-pencil"></i></button></td>
+    </tr>
+  </tbody>
+</table>
+<a class="btn btn-primary" href="#/NewCustomer">Add New Customer</a>
+</div>

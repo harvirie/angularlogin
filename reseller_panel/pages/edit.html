@@ -1,0 +1,56 @@
+<!-- 
+  Author - Anjana Wijesundara
+  Content - wsanjana951@gmail.com
+-->
+<h2>Edit Customer</h2>
+<div class="row" ng-controller='CustomerEditControler'>
+  <div class="col-md-6">
+  
+  <form novalidate ng-repeat="customer in CustomerDetail" name="AddNewForm" id="add-new-form" method="post" action="">
+    <input type="hidden" ng-model="customer.id" value="{{customer.id}}" />
+     <div class="form-group">
+      <label>ID Reseller</label>
+      <input class="form-control" type="text" ng-model="customer.idreseller" value="{{customer.idreseller}}" required />
+    </div>
+    <div class="form-group">
+      <label>First Name</label>
+      <input class="form-control" type="text" ng-model="customer.First_Name" value="{{customer.First_Name}}" required />
+    </div>
+     <div class="form-group">
+      <label>No. KTP</label>
+      <input class="form-control" type="text" ng-model="customer.no_ktp" value="{{customer.no_ktp}}" required />
+    </div>
+    <div class="form-group">
+      <label>Alamat</label>
+      <input class="form-control" type="text" ng-model="customer.alamat" value="{{customer.alamat}}" required />
+    </div>
+    <div class="form-group">
+      <label >Email</label>
+      <input class="form-control" type="text" ng-model="customer.Email" value="{{customer.Email}}" required />
+    </div>
+    <div class="form-group">
+      <label>No. HP</label>
+      <input class="form-control" type="text" ng-model="customer.no_hp" value="{{customer.no_hp}}" required />
+    </div>
+    <div class="form-group">
+      <label>Whatsapp</label>
+      <input class="form-control" type="text" ng-model="customer.no_wa" value="{{customer.no_wa}}" required />
+    </div>
+    <div class="form-group">
+      <label>Pin BBM</label>
+      <input class="form-control" type="text" ng-model="customer.pin_bbm" value="{{customer.pin_bbm}}" required />
+    </div>
+    <div class="form-group">
+      <label>Status</label>
+      <input class="form-control" type="text" ng-model="customer.Status" value="{{customer.Status}}" required />
+    </div>
+
+    <button class="btn btn-primary" ng-disabled="AddNewForm.$invalid || isUnchanged(customer)" id="add-new-btn" ng-click="Update_Customer(customer)">Update
+    <span class="glyphicon glyphicon-floppy-disk"></span></button>
+    <button class="btn btn-danger" ng-click="Delete_Customer(customer)">Delete <span class="glyphicon glyphicon-trash"></span></button>
+    <a href="#/" class="btn">Cancel</a>
+
+  </form>
+
+</div>
+</div>
